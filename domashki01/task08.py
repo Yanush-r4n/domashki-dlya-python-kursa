@@ -7,9 +7,7 @@ raws = int(input("Сколько долек у твоей шоколадки п�
 columns = int(input("Сколько долек у твоей шоколадки по ширине? - "))
 user_num = int(input("Сколько долек ты хочешь отломить? - "))
 
-if user_num == (raws - 1) * columns or user_num == columns:
-    print(f"Держи {user_num} долек шоколада")
-elif user_num == raws * (columns - 1) or user_num == raws:
+if user_num in [(raws - 1) * columns, columns, raws * (columns - 1), raws]:
     print(f"Держи {user_num} долек шоколада")
 else:
     print(f"Не получится за один раз отломить {user_num} долек шоколада")
